@@ -1,0 +1,50 @@
+CREATE TABLE `parmanent_documents` (
+  `id` int NOT NULL,
+  `user_itr_data_id` int DEFAULT NULL,
+  `document_name` varchar(45) DEFAULT NULL,
+  `document_path` varchar(45) DEFAULT NULL,
+  `uploaded_date` varchar(45) DEFAULT NULL,
+  `uploaded_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `user_itr_data_id` FOREIGN KEY (`id`) REFERENCES `user_itr_data` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `user_itr_data` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `aadhar_no` varchar(45) NOT NULL,
+  `pan_no` varchar(45) NOT NULL,
+  `passport_no` varchar(45) DEFAULT NULL,
+  `voter_id` varchar(45) DEFAULT NULL,
+  `driving_license` varchar(45) DEFAULT NULL,
+  `folder_path` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parmanet_data_id_idx` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+CREATE TABLE `yearly_documents` (
+  `id` int NOT NULL,
+  `yearly_information_id` varchar(45) DEFAULT NULL,
+  `document_name` varchar(45) DEFAULT NULL,
+  `document_path` varchar(45) DEFAULT NULL,
+  `uploaded_date` varchar(45) DEFAULT NULL,
+  `uploaded_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+yearly_informationCREATE TABLE `yearly_documents` (
+  `id` int NOT NULL,
+  `yearly_information_id` varchar(45) DEFAULT NULL,
+  `document_name` varchar(45) DEFAULT NULL,
+  `document_path` varchar(45) DEFAULT NULL,
+  `uploaded_date` varchar(45) DEFAULT NULL,
+  `uploaded_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

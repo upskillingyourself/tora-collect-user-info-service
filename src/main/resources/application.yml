@@ -1,0 +1,29 @@
+spring:
+  application:
+    name : itr-backend-client-api
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itr_details
+    username: root
+    password: admin@123
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+server:
+  host: 8080
+
+folder:
+    path: /Users/sudhanshugupta/Desktop/itr-file-test-folder
+
+
+
+
+
