@@ -1,16 +1,14 @@
 package itr.client.api.model.db.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @Entity
-public class YearlyDocument {
+@Table(name = "yearly_documents")
+public class YearlyDocuments {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

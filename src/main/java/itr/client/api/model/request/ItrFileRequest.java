@@ -19,5 +19,5 @@ public class ItrFileRequest {
     private String passportNo;
     private String voterId;
     private String dlNo;
-    private String folderPath;
+
 }

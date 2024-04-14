@@ -1,9 +1,6 @@
 package itr.client.api.model.db.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,9 +9,10 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @Entity
+@Table(name = "parmanent_documents")
 public class PermanentDocuments implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "user_itr_data_id")

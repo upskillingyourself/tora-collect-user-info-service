@@ -37,14 +37,15 @@ CREATE TABLE `yearly_documents` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-
-yearly_informationCREATE TABLE `yearly_documents` (
+CREATE TABLE `yearly_information` (
   `id` int NOT NULL,
-  `yearly_information_id` varchar(45) DEFAULT NULL,
-  `document_name` varchar(45) DEFAULT NULL,
-  `document_path` varchar(45) DEFAULT NULL,
-  `uploaded_date` varchar(45) DEFAULT NULL,
-  `uploaded_status` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `itr_year` varchar(45) DEFAULT NULL,
+  `trnsaction_id` varchar(45) DEFAULT NULL,
+  `payment_status` varchar(45) DEFAULT NULL,
+  `salaried` varchar(45) DEFAULT NULL,
+  `parmanent_data_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `user_data_id` FOREIGN KEY (`id`) REFERENCES `user_itr_data` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+SELECT * FROM itr_details.yearly_document;
+
